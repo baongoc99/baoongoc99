@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="text/css" href="images/logotitle.png" style="width: 100px;">
+	<title>Giỏ hàng</title>
+	<link rel="stylesheet" type="text/css" href="css/cart.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script>
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+	        document.getElementById("myBtn").style.display = "block";
+	    } else {
+	        document.getElementById("myBtn").style.display = "none";
+	    }
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+	    document.body.scrollTop = 0;
+	    document.documentElement.scrollTop = 0;
+	}
+	</script>
+	<script>
+		  'use strict'
+
+		  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+		  var forms = document.querySelectorAll('.needs-validation')
+
+		  // Loop over them and prevent submission
+		  Array.prototype.slice.call(forms)
+		    .forEach(function (form) {
+		      form.addEventListener('submit', function (event) {
+		        if (!form.checkValidity()) {
+		          event.preventDefault()
+		          event.stopPropagation()
+		        }
+
+		        form.classList.add('was-validated')
+		      }, false)
+		    })
+		
+	</script>
+</head>
+<body>
+	<header>
+		<div class="header ">
+			<div class="row text-center  " style="padding-top: 5px;">
+				<div class="col-4 text-start " style="padding-left:60px">
+					<a href="">Kênh người bán </a>|					
+					<a href="">Tải ứng dụng </a>|
+					<a href="">Kết nối </a>
+					<a href=""><i class="fab fa-facebook"></i></a>
+					<a href=""><i class="fab fa-instagram"></i></a>  
+				</div>
+				<div class="col-4">
+				</div>
+				<div class="col-4 text-end" style="padding-right:60px">
+					<a href=""><i class="far fa-bell"></i> Thông báo </a>|
+					<a href=""><i class="far fa-question-circle"></i> Hỗ trợ </a>|
+					<a data-bs-toggle="offcanvas" href="#offcanvasExample1" role="button" aria-controls="offcanvasExample"><i class="far fa-user"></i> Đăng nhập </a>
+					  <form class="offcanvas offcanvas-end needs-validation" tabindex="-1" id="offcanvasExample1" aria-labelledby="offcanvasExampleLabel" novalidate >
+	                    <div class="offcanvas-header" style="background-color: #ee4d2d	;">
+	                      <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+	                        <div style="margin-bottom: -30px;" class="title">
+	                          <p style="font-size:25px; margin-left: 110px; margin-bottom: 10px;" class="text-center">Đăng nhập</p>
+	                          <hr style="margin-left:110px;">
+	                        </div>
+	                      </h5>
+	                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	                    </div>
+	                    <div class="offcanvas-body">
+	                      <div class="row">
+		                      <div class="logo" style="padding-bottom:20px">
+		                        <a href=""><img style="width: 370px; height: 170px" src="images/logo.png"></a>
+		                      </div>
+	                      </div>
+	                      <div class="form-floating mb-3" >
+	                        <input style="width: 90%; margin-left: 16px; height: 40px;" type="email" class="form-control rounded-2" id="validationCustom01" placeholder="name@example.com" required>
+	                        <label style="font-size: 15px; margin-left: 20px; margin-top: -7px;" class="form-label text-muted " for="validationCustom01" >Email/Số điện thoại/Tên đăng nhập</label>
+	                        <div class="valid-feedback">
+											      Hợp lệ!
+											    </div>
+	                      </div>
+	                      <div class="form-floating mb-3">
+	                        <input style="width: 90%; margin-left: 16px; height: 40px;" type="email" class="form-control rounded-2" id="floatingInput" placeholder="name@example.com">
+	                        <label style="font-size: 15px; margin-left: 20px; margin-top: -7px;" class="text-muted" for="floatingInput">Mật khẩu</label>
+	                      </div>
+	                      <div class="row">
+	                        <div class="col-auto">
+	                            <div class="form-check">
+	                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"style="margin-left: -8px;">
+	                                <label class="form-check-label" for="flexCheckDefault">
+	                                </label>
+	                              </div>
+	                        </div>
+	                        <div class="col-auto" style="padding-bottom:20px">
+	                            <p  class="text-muted" style="margin-left: -18px;">Nhớ mật khẩu</p>
+	                        </div>
+	                        <button style="background-color: #ee4d2d;width: 250px;margin-left: 62px; " type="submit" class="btn btn-danger mb-3 a rounded-5 text-center" >Đăng nhập</button>
+	                        <div class="row">
+	                          <div style="margin-left: 20px; margin-top: 10px;" class="col text-start">
+	                            <a class="text-primary" href="#">Quên mật khẩu</a>
+	                          </div>
+	                          <div style="margin-top: 10px;" class="col text-end text-primary">
+	                            <a class="text-primary" href="#">Đăng nhập với SMS</a>
+	                          </div>
+	                          <hr style="margin-left:15px;"><br>
+	                          <div style="margin-left: -10px;padding-top: 20px;" class="row">
+	                            <div class="col">
+	                              <button type="button " style="border:none;" class="btn "><i class="fa-brands fa-facebook text-primary" style="font-size: 30px;"></i></button>
+	                            </div>
+	                            <div class="col">
+	                              <button type="button" style="border:none;" class="btn "><i class="fa-brands fa-google text-success" style="font-size: 30px;"></i></button>
+	                            </div>
+	                            <div class="col">
+	                              <button type="button" style="border:none;" class="btn "><i class="fa-brands fa-apple" style="font-size: 35px;margin-top: -5px;"></i></button>
+	                            </div>
+	                          </div>
+	                          <p style="margin-top: 20px; margin-left: -35px;" class="text-muted">Bạn là khách hàng mới?<a style="color:blue ; font-size: 15px;" href="#"> Đăng ký</a></p>
+	                        </div>
+	                      </div>
+	                    </div>
+	                  </form>
+	                </div>
+	              </div>
+				</div><hr>
+			</div>
+			<div class="row">
+				<div class="col-2 logo_1">
+					<a href="homepage.html"><img src="images/logo.png" width="300px" ></a>
+				</div>
+				<div class="col-8">
+					<nav class="navbar">
+					  <form class="container-fluid">
+					    <div class="input-group">
+					      <input type="text" class="form-control" placeholder="Đăng ký và nhận voucher bạn mới đến 70K!" aria-label="Username" aria-describedby="basic-addon1">
+					      <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg></span>
+					    </div>
+					  </form>
+					</nav>
+					<h6>WELLCOME TO PETSHOP BAOO NGOC !!</h6>
+				</div>
+				<div class="col-2 buy">
+					<button type="button" class="btn position-relative">
+  						<a href="cart.html" align="left"><i class="fas fa-shopping-cart" ></i></a>
+  							<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="margin-top:35px">1
+    							<!-- <span class="visually-hidden">unread messages</span> -->
+  							</span>
+					</button>
+				</div>
+			</div>
+		</div>		
+	</header>
+	<content >
+		<div class="row" style="padding-top: 20px">
+			<h2><span style="color:rgba(255, 99, 71, 1);font-size: 50px;">|</span> GIỎ HÀNG</h2>
+		</div>
+		
+		<div class="giohang">
+			<div class="row " style="font-size:18px; height:50px; padding-top: 15px;margin-bottom: 20px; background-color: #efa69340 ;margin-left: 120px;margin-right: 120px;" >
+	        <div style="margin-left: 10px; margin-top: 50px;" class="col-1">
+	        </div>
+	        <div class="col">
+	          <p style="margin-left:-148px">Ảnh</p>
+	        </div>
+	        <div class="col-5">
+	          <p style="margin-left:-90px">Tên sản phẩm</p>
+	        </div>
+	        <div class="col">
+	          <p style="margin-left:-270px; ">Phân loại</p>
+	        </div>
+	        <div class="col">
+	          <p style=" margin-left: -180px;">Đơn giá</p>
+	        </div>
+	        <div class="col">
+	          <p style="margin-left: -115px;">Số lượng</p>
+	        </div>
+	        <div class="col">
+	          <p style="margin-left: -50px;">Thành tiền</p>
+	        </div>
+	        <div style=" margin-right:-125px;" class="col text-center">
+	          
+	          <p style="">Thao tác</p>
+	        </div>        
+	    </div>
+	  
+        <div style=" padding-left: 40px; padding-right: 40px;" class="sp">
+          <div style="font-size:14px; height:95px; margin-top: -15px; background-color: #fff;" class="row">
+            <div style="margin-left: 10px; margin-top: 40px;" class="col-1">
+              <div class="form-check ">
+	              
+                <label class="form-check-label" style="margin-left:-25px" for="flexCheckChecked"><input class="form-check-input" type="checkbox" style="width:17px;height:17px;background-color:#b77665 ;" checked><div class="stardust-checkbox__box" ></div></label>
+              </div>
+            </div>
+            <div class="col">
+              <a href="detail.html"><img style="width:65px; margin-top: 20px; margin-left: -80px;" src="images/aocamtho.png"></a>
+            </div>
+            <div class="col-5">
+              <p style="margin-left: -23px; margin-top:40px;">Áo cam thỏ LV cho mèo</p>
+            </div>
+            <div class="col">
+              <p style="margin-top: 40px; margin-left:-250px;" class="text-muted">M</p>
+            </div>
+            <div class="col">
+              <p style="margin-top:40px; margin-left: -180px;"><span>56.000</span><sup>₫</sup></p>
+            </div>
+            <div class="col soluong">
+              <div class="input-group" style="width:110px; margin-top:30px; margin-left: -146px;">
+              	<input  type="number" class="form-control" id="inputnumber" value="1">
+			    
+			  </div>
+            </div>
+            <div class="col tt">
+              <p style="color:#ee4d2d; margin-top:40px; margin-left: -36px;">56.000<sup>₫</sup></p>
+            </div>
+            <div style="margin-top: 15px; margin-right:-40px;" class="col text-center">
+	          <a style="font-size: 14px;" href="#"><i class="fa-regular fa-trash-can cart-delete"></i></a>
+	          <p style="color: #ee4d2d; margin-top: 0px;">Sản phẩm tương tự</p>
+	        </div>
+          </div>
+        </div>
+        
+		<div class="row" style="margin-top: 10px;font-size:18px; height:50px; padding-top: 15px;margin-bottom: 20px; background-color: #efa69340 ;margin-left: 120px;margin-right: 120px" >
+            <div  class="col-8">
+	        </div>
+			<div class="col-3">
+				<h5>Tổng tiền</h5>
+			</div>
+			<div class="col tongtien" style="margin-left: -40px;color: #dc3545;font-size: 22px;margin-top: -5px;">
+				<span>56.000</span><sup>₫</sup>
+			</div>
+		</div>
+		
+    <div style=" padding-left: 90px; " class="muahang">
+      <div style="font-size:15px; height:40px;  background-color: #fff;" class="row">
+        <div class="col-9 "> 
+        </div>
+        <div class="col-3 ">
+          <button style="width:150px;font-size: 22px;" type="button" class="btn btn-danger rounded-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">ĐẶT HÀNG</button>
+        </div>
+      </div>
+    </div><hr style="margin-left:120px;margin-right: 120px;">
+
+		<!-- Modal -->
+		<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+		  <div class="modal-dialog">
+		    <div class="modal-content"style="height: 600px;">
+		      <div class="modal-header" style="background-color:rgba(255, 99, 71, 1)">
+		        <h5 class="modal-title " id="staticBackdropLabel">THÔNG TIN ĐẶT HÀNG</h5>
+		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		      </div>
+		      <div class="modal-body">
+		        <div class="form mb-3" >
+              <p style="font-size: 15px; margin-left: 20px; margin-top: -7px;margin-bottom: -2px;" >Họ tên người nhận hàng</p>
+              <input style="width: 90%; margin-left: 16px; height: 40px;" class="form-control rounded-2" required >
+            </div>
+            <div class="form mb-3" >
+              <p style="font-size: 15px; margin-left: 20px; margin-top: -7px;margin-bottom: -2px;" >Số điện thoại</p>
+              <input style="width: 90%; margin-left: 16px; height: 40px;" class="form-control rounded-2" required >
+            </div>
+            
+            <div class="row" style="padding-left: 0px;padding-right: 0px;">
+            	<div class="col-6">
+						    <p style="padding-left:22px;margin-bottom: -2px;">Tỉnh/thành</p>
+							    <select class="form-select" id="specificSizeSelect" style="width: 200px; margin-left: 17px; height: 45px;">
+							      <option selected>Huế</option>
+							      <option value="1">Hà Nội</option>
+							      <option value="2">Đà Nẵng</option>
+							      <option value="3">Hồ Chí Minh</option>
+							    </select>
+					  	</div>
+					  	<div class="col-6">
+						    <p style="padding-left:16px;margin-bottom: -2px;">Quận/huyện</p>
+							    <select class="form-select" id="specificSizeSelect" style="width: 180px; margin-left: 10px; height: 45px;">
+							      <option selected>Trường An</option>
+							      <option value="1">Phước Vĩnh</option>
+							    </select>
+					  	</div>
+            </div>
+            <div class="form mb-3" >
+              <p style="font-size: 15px; margin-left: 20px; margin-top: 10px;margin-bottom: -2px;" >Địa chỉ</p>
+              <input style="width: 90%; margin-left: 16px; height: 40px;"  class="form-control rounded-2" required>
+            </div>
+            
+          	<div class="form-check " style="margin-top:-2px">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"style="margin-left: -8px;">
+              <label class="form-check-label" for="flexCheckDefault"><p  style="margin-left: 10px;">Lưu thông tin</p>
+              </label>
+            </div>
+            
+            <div class="ghichu"style="padding-left:18px;padding-right: 28px;margin-bottom: -2px;">
+            	<h6 >Ghi chú</h6> 
+            	<div class="form" >
+							  <textarea class="form-control" placeholder="Thêm ghi chú cho PETSHOP" id="floatingTextarea"style="height:60px"></textarea>
+							</div>
+            </div>
+		      </div>
+		      <div class="modal-footer" style="padding-right:45px">
+		        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Thoát</button>
+		        <button type="button" class="btn" style="background-color:rgba(255, 99, 71, 1);" id="liveToastBtn" data-bs-dismiss="modal">Hoàn tất</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
+										<div class="toast-container position-fixed bottom-20 end-0 p-3">
+                      <div id="liveToast" class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true" >
+                        <div style="color:#fff;background-color: #00ab5c;" class="toast-header ">
+                          <strong class="me-auto">Thành công!</strong>
+                          <small>bây giờ</small>
+                          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body text-start">
+                          Đơn hàng đã đặt thành công!
+                        </div>
+                      </div>
+                    </div>
+                   
+
+
+
+    
+		<div class="text-center splq">
+			<h2 style="color: red;padding-top: 50px;">SẢN PHẨM LIÊN QUAN</h2>
+			<hr  width="30%">
+		</div>
+		<div class="suggestions">
+			<div class="row row-cols-3 row-cols-md-5 g-4 splq1">
+				
+				<div class="col ">
+				    <div class="card">
+				    	
+				    		<img src="images/aonobita.png" class="card-img-top" alt="...">
+					      	<div class="card-body">
+						        <a href=""><h5 class="card-title">Áo Nobita</h5></a>
+						        <p class="card-text"><span>54.000</span><sup>₫</sup></p>
+						        <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16"><path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z"/></svg>Thêm vào giỏ hàng</button>
+					      	</div>
+				    	
+				    </div>	
+			  	</div>
+			  	<div class="col">
+			    	<div class="card">
+				      <img src="images/aogausoc.png" class="card-img-top" alt="...">
+				      <div class="card-body">
+				        <a href=""><h5 class="card-title">Áo gấu sọc</h5></a>
+				        <p class="card-text"><span>56.000</span><sup>₫</sup></p>
+				       <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16"><path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z"/></svg>Thêm vào giỏ hàng</button>
+				      </div>
+			    	</div>
+			  </div>
+			  <div class="col">
+			    	<div class="card">
+				      <img src="images/damngoisao.png" class="card-img-top" alt="...">
+				      <div class="card-body">
+				        <a href=""><h5 class="card-title">Đầm ngôi sao</h5></a>
+				        <p class="card-text"><span>170.000</span><sup>₫</sup></p>
+				        <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16"><path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z"/></svg>Thêm vào giỏ hàng</button>
+				      </div>
+			    	</div>
+			  </div>
+			  <div class="col">
+			    	<div class="card">
+				      <img src="images/aoluoigau.png" class="card-img-top" alt="...">
+				      <div class="card-body">
+				        <a href=""><h5 class="card-title">Áo lưới gấu</h5></a>
+				        <p class="card-text"><span>48.000</span><sup>₫</sup></p>
+				        <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16"><path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z"/></svg>Thêm vào giỏ hàng</button>
+				      </div>
+			    	</div>
+			  </div>
+			  <div class="col">
+			    	<div class="card">
+				      <img src="images/aohello.png" class="card-img-top" alt="...">
+				      <div class="card-body">
+				        <a href=""><h5 class="card-title">Áo Hello Kitty</h5></a>
+				        <p class="card-text"><span>50.000</span><sup>₫</sup></p>
+				        <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16"><path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z"/></svg>Thêm vào giỏ hàng</button>
+				      </div>
+			    	</div>
+			  </div>
+			</div>  
+		</div>
+		<div class="row_1 " style="padding-bottom: 20px;">
+			<button class="btn justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="width: 100px;background-color: lightgray;color: red;margin-left: 700px;">Xem thêm</button>
+			
+
+			<div class="collapse " id="collapseExample" style="padding-top: 20px">
+			    <div class="row row-cols-2 row-cols-md-5 g-4 splq1">
+				  <div class="col">
+				    
+				    	<div class="card">
+					      <img src="images/aotraicay.png" class="card-img-top" alt="...">
+					      <div class="card-body">
+					        <a href=""><h5 class="card-title">Áo trái cây</h5></a>
+					        <p class="card-text">52.000<sup>₫</sup> </p>
+					        
+					      </div>
+				    	</div>
+				  </div>
+				  <div class="col">
+				    
+				    	<div class="card">
+					      <img src="images/aogauhong.png" class="card-img-top" alt="...">
+					      <div class="card-body">
+					        <a href=""><h5 class="card-title">Áo gấu hồng</h5></a>
+					        <p class="card-text">64.000<sup>₫</sup> </p>
+					        
+					      </div>
+				    	</div>
+				  </div>
+				  <div class="col">
+				    
+				    	<div class="card">
+					      <img src="images/aodoremon.png" class="card-img-top" alt="...">
+					      <div class="card-body">
+					        <a href=""><h5 class="card-title">Áo Doremon</h5></a>
+					        <p class="card-text">56.000<sup>₫</sup> </p>
+					        
+					      </div>
+				    	</div>
+				  </div>
+				  <div class="col">
+				   
+				    	<div class="card">
+					      <img src="images/aoxanhdoremon.png" class="card-img-top" alt="...">
+					      <div class="card-body">
+					        <a href=""><h5 class="card-title">Áo xanh Doremon</h5></a>
+					        <p class="card-text">50.000<sup>₫</sup> </p>
+					        
+					      </div>
+				    	</div>
+				  </div>
+				  <div class="col">
+				    
+				    	<div class="card">
+					      <img src="images/aochaien.png" class="card-img-top" alt="...">
+					      <div class="card-body">
+					        <a href=""><h5 class="card-title">Áo Chaien</h5></a>
+					        <p class="card-text">54.000<sup>₫</sup> </p>
+					        
+					      </div>
+				    	</div>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</content>
+	<footer>
+		<div class="row " style="margin-right: -10px;">
+			<div class="col-sm-3  text-center">
+				<img src="images/logo.png" width="80%" style="margin-top:-20px"><br>
+				<img src="images/facebook.png"style="width:40px; height:40px">
+				<img src="images/zalo.png" style="width:40px; height:40px">
+				<img src="images/sendo.png" style="width:40px; height:40px"><br>
+				<img src="images/logocuoi.png" width="50%">
+				
+			</div>
+			<div class="col-sm-3  ">
+				<h5 class="border_ft" >LIÊN HỆ</h5>
+				<p><i class="fas fa-map-marked-alt"></i> CS1: 99 Đặng Huy Trứ - Trường An - Tp.Huế.</p>
+				<p><i class="fas fa-map-marked-alt"></i> CS2: 54 Chu Văn An - Phú Hội - Tp.Huế.</p>
+				
+				<p><i class="fas fa-phone-alt"></i> 032.966.9660</p>
+				<p><i class="fas fa-phone-alt"></i> 0913.710.333</p>
+				<p><i class="fas fa-envelope"></i> cskh@petshop.com.vn</p>
+			</div>
+			<div class="col-sm-3  ">
+				<h5 class="border_ft">GIỚI THIỆU</h5>
+				<p><i class="fas fa-angle-right"></i> Giới thiệu</p>
+				<p><i class="fas fa-angle-right"></i> Tuyển dụng</p>
+				<p><i class="fas fa-angle-right"></i> Liên hệ </p>
+				<p><i class="fas fa-angle-right"></i> Hướng dẫn đặt hàng </p>
+				<p><i class="fas fa-angle-right"></i> Thanh toán và vận chuyển </p>
+			</div>
+			<div class="col-sm-3 ">
+				<h5 class="border_ft">HỖ TRỢ</h5>
+				<p><i class="fas fa-angle-right"></i> Chính sách thanh toán</p>
+				<p><i class="fas fa-angle-right"></i> Chính sách vận chuyển</p>
+				<p><i class="fas fa-angle-right"></i> Chính sách đổi trả </p>
+				<p><i class="fas fa-angle-right"></i> Chính sách bảo mật</p>
+				
+				<p><i class="fas fa-angle-right"></i> Điều khoản dịch vụ </p>
+			</div>
+		</div><hr>
+		<div class="text-center endd">
+
+			<b>©</b> Bản quyền thuộc về <b>Petshop Bảoo Ngọc</b> | Cung cấp bởi<b> Bảoo Ngọc</b>
+		</div>
+	</footer>
+	<div class="hotline_new">
+		<a href="">0913710333</a>
+	</div>
+	<script src="script.js"></script>
+	<script>
+		const toastTrigger = document.getElementById('liveToastBtn')
+const toastLiveExample = document.getElementById('liveToast')
+if (toastTrigger) {
+  toastTrigger.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExample)
+
+    toast.show()
+  })
+};
+	</script>
+	<button  onclick="topFunction()" id="myBtn" title="Go to top"><svg width="50" height="50" fill="currentColor" class="bi bi-arrow-up-square" viewBox="0 0 16 16"><path  fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 9.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/></svg></button>
+</body>
+</html>
